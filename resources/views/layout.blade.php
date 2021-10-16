@@ -7,81 +7,72 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
-    <title>Hello, world!</title>
+    {{-- <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" /> --}}
+    <script src="https://use.fontawesome.com/c53c06c750.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Maqueta</title>
   </head>
   <body>
-        <header style="background-color: rebeccapurple">
+        <header style="background-color: rgba(253, 169, 163, 0.849)">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 0, 0, 0)">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      <a class="nav-link" href="#">Features</a>
-                      <a class="nav-link" href="#">Pricing</a>
-                      <a class="nav-link disabled">Disabled</a>
+                      <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                      <a class="nav-link active" aria-current="page" href="{{route('acerdaDeNosotros')}}">Acerca de Nosotros</a>
+                      <a class="nav-link active" aria-current="page" href="{{route('producto')}}">Productos</a>
+                      <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
                     </div>
                   </div>
                 </div>
             </nav>
-            <div class="row">
-                <div class="col-2">
-                    <h1>Prueba Ahora <br> Un nuevo estilo</h1>
-                    <p>El Código fair play de la FIFA abraza todos los principios deportivos, morales y éticos que defiende 
-                        la FIFA, y por los cuales continuará 
-                        luchando en el futuro, independientemente de las influencias y presiones que pueda afrontar.
-                    </p>
-                    <a href="" class="btn">Explorar Ahora &#8594;</a>
-                </div>
-                <div class="col-2">
-                    <img src="{{ asset('asset/img/image1.png') }}" alt="">
-                </div>
-            </div>
+            
+            @yield('header')
         </header>
-    
-    <footer>
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Descarga nuestra App</h3>
-                <p>Descarga la App android y IOS en tu Smartphone.</p>
-                <div class="app-logo">
-                    <img src="images/play-store.png" >
-                    <img src="images/app-store.png" >
+
+        @yield('content')
+
+        <footer class="text-white">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h3>Descarga nuestra App</h3>
+                    <p>Descarga la App android y IOS en tu Smartphone.</p>
+                    <div class="app-logo">
+                        <img src="{{ asset('asset/img/play-store.png') }}" >
+                        <img src="{{ asset('asset/img/app-store.png') }}" >
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="app-logo">
+                        <img src="{{ asset('asset/img/logo-white.png') }}" >
+                    </div>
+                    <p>Nuestro proposito es hacer de forma sostenible el 
+                        placer del deporte accesible al dinero. 
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <h3>Enlaces utiles</h3>
+                    <ul>
+                        <li>Cupones</li>
+                        <li>Blogs</li>
+                        <li>Unete al Afiliado </li>
+                        <li>Politica de Devoluciones</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><i class="fa fa-facebook"> facebook.com</i></li>
+                        <li><i class="fa fa-twitter"> twitter.com</i></li>
+                        <li><i class="fa fa-instagram"> instagram.com</i></li>
+                        <li><i class="fa fa-youtube"> youtube.com</i></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col-2">
-                <img src="images/logo-white.png" >
-                <p>Nuestro proposito es hacer de forma sostenible el 
-                    placer del deporte accesible al dinero. 
-                </p>
-            </div>
-            <div class="footer-col-3">
-                <h3>Enlaces utiles</h3>
-                <ul>
-                    <li>Cupones</li>
-                    <li>Blogs</li>
-                    <li>Unete al Afiliado </li>
-                    <li>Politica de Devoluciones</li>
-                </ul>
-            </div>
-            <div class="footer-col-4">
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><i class="fa fa-facebook"> </i></li>
-                    <li><i class="fa fa-twitter"></i></li>
-                    <li><i class="fa fa-instagram"></i></li>
-                    <li><i class="fa fa-youtube"></i></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <p class="author"> author: Erick Vidal-2021</p>
-    </footer>
+        </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
